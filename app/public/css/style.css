@@ -1,0 +1,17 @@
+.jumbotron {
+  background: #929292;
+}
+.body {
+  background: #e4ebf1;
+}
+hr {
+  border-color: inherit;
+  margin: 1em 0;
+}
+.Mntitle {
+  color: white;
+}
+#resultModal {
+  overflow: hidden;
+  width: 500px;
+}
