@@ -1,6 +1,11 @@
 .jumbotron {
   background: #929292;
 }
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .body {
   background: #e4ebf1;
 }
@@ -11,7 +16,7 @@ hr {
 .Mntitle {
   color: white;
 }
-#resultModal {
+#resultsModal img {
   overflow: hidden;
   width: 500px;
 }
