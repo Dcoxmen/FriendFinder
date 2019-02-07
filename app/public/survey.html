@@ -214,7 +214,6 @@
           $(".form-control").each(function() {
             if ($(this).val() === "") isValid = false;
           });
-
           $(".chosen-select").each(function() {
             if ($(this).val() === "") isValid = false;
           });
@@ -238,14 +237,14 @@
             ]
           };
           var currentURL = window.location.origin;
+          $.post(currentURL + "/api/friends", userData, function(data) {
+            $("#matchName").text(data.name);
+            $("#matchImg").attr("src", data.photo);
 
-          $(currentURL + "/api/friends", userData, function(data) {
-            $("#mathchName").text(data.name);
-            $("mathchImg").attr("src", data.photo);
-            $("resultsModal").modal("toggle");
+            $("#resultsModal").modal("toggle");
           });
         } else {
-          alert("Please fill out all fields before submitting.");
+          alert("Please fill out all fields before submitting!");
         }
         return false;
       });

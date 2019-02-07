@@ -24,7 +24,7 @@ module.exports = function(app) {
     userData = {
       name: req.body.name,
       photo: req.body.photo,
-      socores: b
+      scores: b
     };
 
     console.log("Name: " + userName);
@@ -32,7 +32,7 @@ module.exports = function(app) {
 
     var sum = b.reduce((a, b) => a + b, 0);
 
-    console.log("Sum of users score" + sum);
+    console.log("Sum of users score " + sum);
     console.log("Best match friend diff " + bestMatch.friendDifference);
     console.log("+++++++=================++++++++++");
 
@@ -50,7 +50,7 @@ module.exports = function(app) {
       if (totalDifference <= bestMatch.friendDifference) {
         bestMatch.name = friends[i].name;
         bestMatch.photo = friends[i].photo;
-        bestMatch.friendDifference = friends[i].totalDifference;
+        bestMatch.friendDifference = totalDifference;
       }
       console.log(totalDifference + " Total Difference");
     }
